@@ -5,8 +5,7 @@ namespace ExecptionTask
     class Program
     {
         static void Main(string[] args)
-        {
-            
+        {       
                 Console.WriteLine("Enter Room Number: ");
                 string room = Console.ReadLine();
 
@@ -32,10 +31,10 @@ namespace ExecptionTask
                 int year = Int32.Parse(Console.ReadLine());
 
                 System.Console.WriteLine("Enter Time");
-                double Time = Int32.Parse(Console.ReadLine());
+                double Time = Convert.ToDouble(Console.ReadLine());
 
                 System.Console.WriteLine("Enter amount of time student stayed in the room (IN MINUTES): ");
-                int time = Int32.Parse(Console.ReadLine());  
+                double stay = Convert.ToDouble(Console.ReadLine()); 
             
             }
             
@@ -49,6 +48,10 @@ namespace ExecptionTask
             catch (Exception ex) {
                 System.Console.WriteLine($"Something went wrong :( Closing Program - {ex.Message}");
             }
+
+            System.Console.WriteLine($"Student {name} was in classroom {room}");
+
+            
             
         }
     }
